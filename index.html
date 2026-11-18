@@ -2223,17 +2223,15 @@ async function generateLockedKey() {
     const all = timePart + mac;
 
     const segments = [
-        all.substring(0, 4),
-        all.substring(4, 8),
-        all.substring(8, 12),
-        all.substring(12, 16)
+        all.substring(0, 8),
+        all.substring(8, 16)
     ];
 
 
     document.getElementById(
         'finalKey'
     ).innerText =
-        "PRO-" + segments.join("-");
+        "PRO~" + segments.join("~");
 
 
     // expiry: user ke apne local timezone me dikhao
